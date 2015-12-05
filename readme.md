@@ -1,7 +1,7 @@
 GitDiffSwitch.vim
 =================
 
-> A Vim plugin to toggle the [diff algorithm](https://git-scm.com/docs/git-diff) Git is using for the patch being edited [git add --patch](https://git-scm.com/docs/git-add)
+> A Vim plugin to toggle the [diff algorithm](https://git-scm.com/docs/git-diff) Git is using for the patch being edited via [git add --patch](https://git-scm.com/docs/git-add)
 
 # Installing with [pathogen.vim](https://github.com/tpope/vim-pathogen)
 
