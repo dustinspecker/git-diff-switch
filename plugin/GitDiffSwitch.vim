@@ -1,7 +1,7 @@
 let s:diffAlgo = 0
 let s:algos = ['myers', 'patience', 'histogram', 'minimal']
 function! GitDiffSwitch()
-	let hunk = getline(2)
+	let s:hunk = getline(2)
 	if (s:diffAlgo == 0)
 		:%delete _ | r !git diff --diff-algorithm=myers
 	elseif (s:diffAlgo == 1)
@@ -14,7 +14,7 @@ function! GitDiffSwitch()
 
 	" delete other hunks before the hunk we care about
 	execute "normal gg0"
-	execute "0delete _ " . (search("^" . hunk) - 1)
+	execute "0delete _ " . (search("^" . s:hunk) - 1)
 
 	" look for more hunks
 	execute "normal /@@ -\<CR>"
