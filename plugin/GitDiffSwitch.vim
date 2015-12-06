@@ -1,5 +1,5 @@
 let s:diffAlgo = 0
-let s:algos = ['myers', 'patience', 'histogram', 'minimal']
+let s:algos = ["myers", "patience", "histogram", "minimal"]
 function! GitDiffSwitch()
 	let s:hunk = getline(2)
 	if (s:diffAlgo == 0)
@@ -19,8 +19,8 @@ function! GitDiffSwitch()
 	" look for more hunks
 	execute "normal /@@ -\<CR>"
 	" if found - delete them
-	if (line('.') != 1)
-		execute line('.') . "delete _ " . line('$')
+	if (line(".") != 1)
+		execute line(".") . "delete _ " . line("$")
 	endif
 
 	" add quick guide to bottom
